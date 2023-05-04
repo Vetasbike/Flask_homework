@@ -2,6 +2,7 @@ from combojsonapi.spec import ApiSpecPlugin
 from flask import Flask
 
 from blog import commands
+
 from blog.extensions import db, login_manager, migrate, csrf, admin, api
 from blog.models import User
 
