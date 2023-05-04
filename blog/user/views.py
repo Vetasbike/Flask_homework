@@ -55,7 +55,9 @@ def user_list():
 @user.route('/<int:pk>')
 @login_required
 def profile(pk: int):
+
     selected_user: User = User.query.filter_by(id=pk).one_or_none()
+
     if not selected_user:
         raise NotFound(f"User #{pk} doesn't exist!")
 

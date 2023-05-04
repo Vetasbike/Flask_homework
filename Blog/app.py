@@ -1,7 +1,9 @@
 from flask import Flask
 
 from blog import commands
+
 from blog.extensions import db, login_manager, migrate, csrf, admin
+
 from blog.models import User
 
 
